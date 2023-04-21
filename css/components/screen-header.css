@@ -1,0 +1,60 @@
+.screen__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+}
+
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+  position: relative;
+}
+
+@keyframes rotateCog {
+  from {
+    opacity: 0.5;
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg) scale(1.5);
+  }
+}
+
+@keyframes icon-effect-header {
+  from {
+    opacity: 0.5;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 0.7s linear forwards;
+}
+
+@keyframes icon-effect-header {
+  from {
+    opacity: 0.5;
+    transform: none;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.screen-header__icons .fa-search:hover,
+.screen-header__icons .fa-comment:hover,
+.screen-header__icons .fa-music:hover,
+.screen-header__icons .fa-search:hover {
+  animation: icon-effect-header 0.7s linear forwards;
+}
